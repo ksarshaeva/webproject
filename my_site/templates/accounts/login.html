@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<header class="masthead hs-bg-primary text-white-two text-center">
+    <div class="container d-flex align-items-center flex-column">
+        <h2>Welcome back</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn hs-bg-secondary btn-xl text-white" type="post">Login</button>
+            
+        </form>
+    </div>
+</header>
+
+{% endblock %}
